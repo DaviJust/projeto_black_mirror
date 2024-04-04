@@ -1,4 +1,4 @@
-<h1>Aplicativo de Verificação de Compatibilidade de Candidatos<\h1>
+<h1>Aplicativo de Verificação de Compatibilidade de Candidatos</h1>
 
 Este é um aplicativo desenvolvido em Python para verificar a compatibilidade de candidatos com uma vaga, de acordo com seus resultados nas etapas do processo seletivo.
 Funcionalidades
