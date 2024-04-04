@@ -11,7 +11,7 @@ Instruções de Instalação
     Certifique-se de ter o Python instalado em seu sistema. Você pode baixar e instalar o Python no site oficial.
     Baixe o arquivo contendo o código-fonte deste aplicativo.
     Abra um terminal e navegue até o diretório onde o arquivo foi baixado.
-    Execute o arquivo Python com o comando python nome_do_arquivo.py.
+    Execute o arquivo Python com o comando python main.py.
 
 Uso
 
