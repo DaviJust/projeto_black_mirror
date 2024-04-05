@@ -11,25 +11,25 @@ def cadastrar_candidatos(matriz_candidatos):
       nota_t = input("Digite a nota do teste teórico do candidato: ")
       nota_p = input("Digite a nota do teste prático do candidato: ")
       nota_s = input("Digite a nota da avaliação de soft skills do candidato: ")
-      notas = f"e{nota_e}t{nota_t}p{nota_p}s{nota_s}"  
+      notas = f"e{nota_e}_t{nota_t}_p{nota_p}_s{nota_s}"
       matriz_candidatos.append(Candidatos(nome, notas))
 
 def procurar_candidatos(matriz_candidatos, pesquisar_entrevista, pesquisar_teórico, pesquisar_prático, pesquisar_soft_skills):
   candidato_encontrado = False
   for candidato in matriz_candidatos:
-    notas = candidato.notas
-    nota_e = int(notas[1])
-    nota_t = int(notas[3])
-    nota_p = int(notas[5])
-    nota_s = int(notas[7])
-    if nota_e >= pesquisar_entrevista and nota_t >= pesquisar_teórico and nota_p >= pesquisar_prático and nota_s >= pesquisar_soft_skills:
-      print(f"Nome: {candidato.name}")
-      print(f"Notas: {candidato.notas}")
-      print()
-      candidato_encontrado = True
+      notas = candidato.notas
+      nota_e = int(notas.split('_')[0][1:])
+      nota_t = int(notas.split('_')[1][1:])
+      nota_p = int(notas.split('_')[2][1:])
+      nota_s = int(notas.split('_')[3][1:])
+      if nota_e >= pesquisar_entrevista and nota_t >= pesquisar_teórico and nota_p >= pesquisar_prático and nota_s >= pesquisar_soft_skills:
+          print(f"Nome: {candidato.name}")
+          print(f"Notas: {candidato.notas}")
+          print()
+          candidato_encontrado = True
 
-    if not candidato_encontrado:
-          print("Nenhum candidato encontrado com as notas mínimas especificadas.")
+  if not candidato_encontrado:
+      print("Nenhum candidato encontrado com as notas mínimas especificadas.")
 
 matriz_candidatos = []
 
@@ -50,3 +50,4 @@ while True:
       break
   else:
       print("Opção inválida. Tente novamente.")
+
