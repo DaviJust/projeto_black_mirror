@@ -33,6 +33,14 @@ def procurar_candidatos(matriz_candidatos, pesquisar_entrevista, pesquisar_teór
 
 matriz_candidatos = []
 
+matriz_candidatos.extend([
+  Candidatos("candidato 1", 'e5_t4_p8_s8'),
+  Candidatos("candidato 2", 'e10_t7_p7_s8'),
+  Candidatos("candidato 3", 'e8_t5_p4_s9'),
+  Candidatos("candidato 4", 'e2_t2_p2_s1'),
+  Candidatos("candidato 5", 'e10_t10_p8_s9')
+])
+
 while True:
   print("Menu:\n[1] Cadastrar candidatos\n[2] Procurar candidatos\n[0] Sair")
   opcao = input("Escolha uma opção: ")
